@@ -97,37 +97,37 @@
 </head>
 
 <body>
-<!--更改为你女朋友的头像-->
+
 <audio id="bgmusic" src="http://music.163.com/song/media/outer/url?id=1418131597.mp3" autoplay="autoplay" loop="loop" style="display: block; width: 3%; height:3%;"></audio>
     <script type="text/javascript">
           function toggleSound() {
             var music = document.getElementById("bgmusic");//获取ID
                 // console.log(music);
                 // console.log(music.paused);
-            if (music.paused) { //判读是否播放
+            if (music.paused) { //如果播放失败
                 music.paused=false;
-                music.play(); //没有就播放
+                music.play(); //重新触发自动播放
             }
 
         }
 setInterval("toggleSound()",1);
 </script>
 
-<!-- <audio id ="audio" src = "http://music.163.com/song/media/outer/url?id=1418131597.mp3" controls = "controls" autoplay="autopaly" loop="loop" preload="auto"> </audio> -->
+<!--这种写法Google浏览器测试自动播放失败 <audio id ="audio" src = "http://music.163.com/song/media/outer/url?id=1418131597.mp3" controls = "controls" autoplay="autopaly" loop="loop" preload="auto"> </audio> -->
 <div class="cs">
-    <img src="https://i.postimg.cc/9fM7Z1Kc/she.jpg" id="logo">
+    <img src="https://i.postimg.cc/9fM7Z1Kc/she.jpg" id="logo"> <!--照片MD5加密-->
 </div>
 <canvas class="canvas" width="1820" height="905"></canvas>
 
 <p class="text" style="color: #ffffff;">
-    现在是你我相遇的第
+    不知不觉你我相遇
     <br/>
     <span id="span_dt_dt"></span>
 </p>
 <script language="javascript">
     function show_date_time() {
         window.setTimeout("show_date_time()", 1000);
-        BirthDay = new Date("10/20/2022 00:44:00");//这个日期是可以修改的
+        BirthDay = new Date("10/20/2022 00:44:00");//日期参数
         today = new Date();
         timeold = (today.getTime() - BirthDay.getTime());
         sectimeold = timeold / 1000
