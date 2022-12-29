@@ -1,94 +1,98 @@
 <!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
 
-<meta name="viewport" content="width=device-width,user-scalable=no">
-<!--嘿嘿，禁止缩放-->
-<!-- <link rel="apple-touch-icon-precomposed" href="./1.png"> -->
-<meta name="format-detection" content="telephone=no">
-<title>Hi-JiaLady</title>
-<style type="text/css">
-body {
-	text-align: center;
-	margin: 0px;
-	padding: 0px;
-	font-size: 25px;
-	color: #FFF;
-	font-family: "微软雅黑";
-	background: #9ccad0;
-}
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-div {
-	text-align: left;
-}
+	<meta name="viewport" content="width=device-width,user-scalable=no">
 
-.tittle {
-	width: 100%;
-	background: #79a8ae;
-	top: 0px;
-	height: 100%;
-	z-index: 0;
-	position: absolute;
-	position: fixed !important;
-	display: none;
-	cursor: default;
-}
-
-.big {
-	font-family: "微软雅黑";
-	color: #FFF;
-	font-size: 35px;
-}
-
-.tishi {
-	position: absolute;
-	position: fixed !important;
-	z-index: 99;
-	bottom: 10px;
-	width: 100%;
-	text-align: center;
-}
-
-.tishiContent {
-	border: 1px solid #FFF;
-	font-size: 18px;
-	padding: 5px;
-	cursor: pointer;
-	border-radius: 5px;
-}
-</style>
-<script type="text/javascript" src="./jquery.min.js"></script>
-<script>
-// if(localStorage["index"]=="1"){
-// 	window.location="index2.html";
-// }
-
-$(document).ready(function(e) {
-	$(document).scrollTop(300); /*移动滚动条到最下方*/
-	timer=setInterval("$.change()",6000);
-	t=1;
-	$("#t-"+t).fadeIn();
-	
-	$(document).click(
-	function(){
-		/*如果用户点击了，就取消自动播放*/
-		clearInterval(timer);
-		$.change();
+	<!-- <link rel="apple-touch-icon-precomposed" href="./1.png"> -->
+	<meta name="format-detection" content="telephone=no">
+	<title>Hi-JiaLady</title>
+	<style type="text/css">
+		body {
+			text-align: center;
+			margin: 0px;
+			padding: 0px;
+			font-size: 25px;
+			color: #FFF;
+			font-family: "微软雅黑";
+			background: #b55479b0;
 		}
-	);
-	
-	/*切换*/
-	$.change=function(){
-		t++;
-		if(t<=$(".tittle").length){
-		$(".tittle").slideUp(1500).fadeOut();
-		$("#t-"+t).slideDown(1500).fadeIn();
-		}else{
-			localStorage["index"]="1";
-			window.location="https://htmlpreview.github.io/?https://github.com/iIkkapaananen/bingbinghappybirthday/blob/master/index2.html";
+
+		div {
+			text-align: left;
+		}
+
+		.tittle {
+			width: 100%;
+			background: #b55479;
+			top: 0px;
+			height: 100%;
+			z-index: 0;
+			position: absolute;
+			position: fixed !important;
+			display: none;
+			cursor: default;
+		}
+
+		.big {
+			font-family: "微软雅黑";
+			color: #FFF;
+			font-size: 35px;
+		}
+
+		.tishi {
+			position: absolute;
+			position: fixed !important;
+			z-index: 99;
+			bottom: 10px;
+			width: 100%;
+			text-align: center;
+		}
+
+		.tishiContent {
+			border: 1px solid #FFF;
+			font-size: 18px;
+			font-family: inherit;
+			padding: 5px;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+	</style>
+	<script type="text/javascript" src="./jquery.min.js"></script>
+	<script>
+		// if(localStorage["index"]=="1"){
+		// 	window.location="index2.html";
+		// }
+
+		$(document).ready(function (e) {
+			$(document).scrollTop(300); /*移动滚动条到最下方*/
+			timer = setInterval("$.change()", 6000);
+			t = 1;
+			$("#t-" + t).fadeIn();
+
+			$(document).click(
+				function () {
+					/*如果用户点击了，就取消自动播放*/
+					clearInterval(timer);
+					$.change();
+				}
+			);
+
+			/*切换*/
+			$.change = function () {
+				t++;
+				if (t <= $(".tittle").length) {
+					$(".tittle").slideUp(1500).fadeOut();
+					$("#t-" + t).slideDown(1500).fadeIn();
+				} else {
+					localStorage["index"] = "1";
+					window.location = "https://htmlpreview.github.io/?https://github.com/iIkkapaananen/bingbinghappybirthday/blob/master/index2.html";
+				}
 			}
-		}
-});
-</script>
+		});
+	</script>
 
 </head>
 
@@ -96,92 +100,110 @@ $(document).ready(function(e) {
 	<center>
 		<div class="tittle" id="t-1" style="display: block;">
 			<table width="100%" border="0" height="100%">
-				<tbody><tr>
-					<td align="center"> <span class="big">饼饼桑</span>~</td>
-				</tr>
-			</tbody></table>
+				<tbody>
+					<tr>
+						<td align="center"> <span class="big">饼饼桑</span>~</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 
 		<div class="tittle" id="t-2" style="">
 			<table width="100%" border="0" height="100%">
-				<tbody><tr>
-					<td align="center"><span class="big">点我</span>~</td>
-				</tr>
-			</tbody></table>
+				<tbody>
+					<tr>
+						<td align="center"><span class="big">点我</span>~</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 
 		<div class="tittle" id="t-3" style="">
 			<table width="100%" border="0" height="100%">
-				<tbody><tr>
-					<td align="center">哈哈哈<span class="big">点到啦~</span></td>
-				</tr>
-			</tbody></table>
+				<tbody>
+					<tr>
+						<td align="center">哈哈哈<span class="big">点到啦~</span></td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</center>
 
 	<div class="tittle" id="t-4" style="">
 		<table width="100%" border="0" height="100%">
-			<tbody><tr>
-				<td align="center">今天的主题是<span class="big">蓝色</span></td>
-			</tr>
-		</tbody></table>
+			<tbody>
+				<tr>
+					<td align="center">今天的主题是<span class="big">粉色</span></td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 
 	<div class="tittle" id="t-5" style="">
 		<table width="100%" border="0" height="100%">
-			<tbody><tr>
-				<td align="center"><br><span class="big">你喜欢的颜色</span></td>
-			</tr>
-		</tbody></table>
+			<tbody>
+				<tr>
+					<td align="center"><br><span class="big">你喜欢的颜色</span></td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 
 	<div class="tittle" id="t-6" style="">
 		<table width="100%" border="0" height="100%">
-			<tbody><tr>
-				<td align="center"><br><span class="big">2022年10月20日凌晨零点44分</span></td>
-			</tr>
-		</tbody></table>
+			<tbody>
+				<tr>
+					<td align="center"><br><span class="big">2022年10月20日凌晨零点44分</span></td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 
 	<div class="tittle" id="t-7" style="">
 		<table width="100%" border="0" height="100%">
-			<tbody><tr>
-				<td align="center"><br><span class="big">是我们第一次相遇的日子</span></td>
-			</tr>
-		</tbody></table>
+			<tbody>
+				<tr>
+					<td align="center"><br><span class="big">是我们第一次相遇的日子</span></td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 
 	<div class="tittle" id="t-8" style="">
 		<table width="100%" border="0" height="100%">
-			<tbody><tr>
-				<td align="center">希望这份礼物<span class="big">你能喜欢~</span></td>
-			</tr>
-		</tbody></table>
+			<tbody>
+				<tr>
+					<td align="center">希望这份礼物<span class="big">你能喜欢~</span></td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 
 
 	<div class="tittle" id="t-9" style="">
 		<table width="100%" border="0" height="100%">
-			<tbody><tr>
-				<td align="center"><br><span class="big">让我们进入~</span></td>
-			</tr>
-		</tbody></table>
+			<tbody>
+				<tr>
+					<td align="center"><br><span class="big">让我们进入~</span></td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 
 
 	<div class="tittle" id="t-10" style="">
 		<table width="100%" border="0" height="100%">
-			<tbody><tr>
-				<td align="center"><br>异次元<span class="big">世界！</span></td>
-			</tr>
-		</tbody></table>
+			<tbody>
+				<tr>
+					<td align="center"><br>异次元<span class="big">世界！</span></td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
-	
+
 	<div align="center" class="tishi">
-		<span class="tishiContent">浅浅的点一下吧>V<</span>
+		<span class="tishiContent">Happy Birthday</span>
 	</div>
-
-
-
 </body>
-	</html>
+
+</html>
